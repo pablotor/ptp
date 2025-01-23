@@ -1,18 +1,10 @@
-# Turborepo Docker starter
+# PabloTor Platform
 
-This is an official Docker starter Turborepo.
-
-## Using this example
-
-Run the following command:
-
-```sh
-npx create-turbo@latest -e with-docker
-```
+This is platform based on Docker starter Turborepo.
 
 ## What's inside?
 
-This Turborepo includes the following:
+This platform includes the following:
 
 ### Apps and Packages
 
@@ -25,6 +17,10 @@ This Turborepo includes the following:
 - `@repo/jest-presets`: Jest configurations
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+
+### Infra
+
+This repo can be deployed in AWS thanks to [Terraform](https://terraform.io)
 
 ### Docker
 
@@ -53,17 +49,6 @@ To shutdown all running containers:
 # Stop all running containers
 docker kill $(docker ps -q) && docker rm $(docker ps -a -q)
 ```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-This example includes optional remote caching. In the Dockerfiles of the apps, uncomment the build arguments for `TURBO_TEAM` and `TURBO_TOKEN`. Then, pass these build arguments to your Docker build.
-
-You can test this behavior using a command like:
-
-`docker build -f apps/web/Dockerfile . --build-arg TURBO_TEAM=“your-team-name” --build-arg TURBO_TOKEN=“your-token“ --no-cache`
 
 ### Utilities
 
